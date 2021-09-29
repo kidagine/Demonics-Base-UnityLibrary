@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Demonics
+namespace Demonics.UI
 {
 	public class SplashScreen : MonoBehaviour
 	{

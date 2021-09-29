@@ -5,12 +5,12 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 
-namespace Demonics
+namespace Demonics.UI
 {
     [RequireComponent(typeof(Audio))]
     [RequireComponent(typeof(Button))]
     [RequireComponent(typeof(Animator))]
-    public class BaseButton : MonoBehaviour, ISelectHandler, IDeselectHandler, IPointerEnterHandler
+    public class BaseButton : MonoBehaviour, ISelectHandler, IDeselectHandler, IPointerEnterHandler, IPointerClickHandler
     {
         [SerializeField] public UnityEvent _onClickedAnimationEnd = default;
         [SerializeField] public UnityEvent _onSelected = default;
@@ -50,6 +50,16 @@ namespace Demonics
         public void OnPointerEnter(PointerEventData eventData)
         {
             _button.Select();
+        }
+
+        public void OnPointerClick(PointerEventData eventData)
+        {
+            if (!_wasClicked)
+            {
+                _wasClicked = true;
+                _audio.Sound("Pressed").Play();
+                _animator.SetTrigger("Pressed");
+            }
         }
 
         public virtual void OnPress()
@@ -101,5 +111,5 @@ namespace Demonics
             //EventSystem.current.SetSelectedGameObject(null);
             _animator.Rebind();
         }
-    }
+	}
 }

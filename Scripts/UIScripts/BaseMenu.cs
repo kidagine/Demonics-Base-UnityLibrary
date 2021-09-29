@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace Demonics
+namespace Demonics.UI
 {
 	public class BaseMenu : MonoBehaviour
 	{
