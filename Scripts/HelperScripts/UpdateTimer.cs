@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using UnityEngine;
 
-namespace Demonics
+namespace Demonics.Utility
 {
     public static class UpdateTimer
     {

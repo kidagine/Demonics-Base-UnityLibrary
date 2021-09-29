@@ -1,7 +1,7 @@
 ﻿
 using System;
 
-namespace Demonics
+namespace Demonics.Sounds
 {
 	[Serializable]
 	public class SoundGroup

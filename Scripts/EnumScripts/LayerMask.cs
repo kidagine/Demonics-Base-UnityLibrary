@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Demonics
+namespace Demonics.Enum
 {
 	[Serializable]
 	public enum LayerMaskEnum { Ground, Default, UI, Player, Hurtbox, Hitbox, Groundbox };

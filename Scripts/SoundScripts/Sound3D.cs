@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Demonics
+namespace Demonics.Sounds
 {
 	[Serializable]
 	public class Sound3D : Sound

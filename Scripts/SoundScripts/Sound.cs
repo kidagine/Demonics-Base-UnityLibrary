@@ -1,7 +1,8 @@
-﻿using System;
+﻿using Demonics.Utility;
+using System;
 using UnityEngine;
 
-namespace Demonics
+namespace Demonics.Sounds
 {
 	[Serializable]
 	public class Sound

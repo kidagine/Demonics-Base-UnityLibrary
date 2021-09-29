@@ -1,7 +1,8 @@
+using Demonics.Enum;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Demonics
+namespace Demonics.Utility
 {
     public class LayerProvider : MonoBehaviour
     {

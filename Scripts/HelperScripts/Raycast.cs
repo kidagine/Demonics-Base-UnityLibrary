@@ -1,6 +1,7 @@
+using Demonics.Enum;
 using UnityEngine;
 
-namespace Demonics
+namespace Demonics.Utility
 {
 	public class Raycast : MonoBehaviour
 	{

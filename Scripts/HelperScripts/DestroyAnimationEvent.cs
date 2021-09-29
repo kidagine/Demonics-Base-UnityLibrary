@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Demonics
+namespace Demonics.Utility
 {
 	public class DestroyAnimationEvent : MonoBehaviour
 	{

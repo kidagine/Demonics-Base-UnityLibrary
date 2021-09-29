@@ -1,8 +1,9 @@
-﻿using System;
+﻿using Demonics.Utility;
+using System;
 using UnityEngine;
 using UnityEngine.Audio;
 
-namespace Demonics
+namespace Demonics.Sounds
 {
 	public class Audio : MonoBehaviour
 	{

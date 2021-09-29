@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Demonics
+namespace Demonics.Manager
 {
 	public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 	{
