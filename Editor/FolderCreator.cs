@@ -2,47 +2,50 @@ using System.IO;
 using UnityEditor;
 using UnityEngine;
 
-public class FolderCreator : EditorWindow
+namespace Demonics.Base
 {
-    private bool _create3DFolders;
-    private bool _createHDRPFolders;
-
-
-    [MenuItem("Demonics/Folder Creator")]
-    public static void ShowWindow()
+    public class FolderCreator : EditorWindow
     {
-        GetWindow(typeof(FolderCreator), false, "Folder Creator");
-    }
+        private bool _create3DFolders;
+        private bool _createHDRPFolders;
 
-    void OnGUI()
-    {
-        EditorGUILayout.Space();
-        if (GUILayout.Button("Create folders", GUILayout.Height(50f)))
-        {
-            CreateFolders();
-        }
-        EditorGUILayout.Space();
-        EditorGUILayout.LabelField("", GUI.skin.horizontalSlider);
-        EditorGUILayout.Space();
-        GUILayout.BeginHorizontal("box");
-        _create3DFolders = GUILayout.Toggle(_create3DFolders, "3D", GUILayout.Height(40f));
-        GUILayout.EndHorizontal();
-        GUILayout.BeginHorizontal("box");
-        _createHDRPFolders = GUILayout.Toggle(_createHDRPFolders, "HDRP", GUILayout.Height(40f));
-        GUILayout.EndHorizontal();
-    }
 
-    private void CreateFolders()
-    {
-        if (_create3DFolders)
+        [MenuItem("Demonics/Folder Creator")]
+        public static void ShowWindow()
         {
-            Directory.CreateDirectory(Path.Combine(Application.dataPath, "_Project/Models"));
-            Directory.CreateDirectory(Path.Combine(Application.dataPath, "_Project/Textures"));
+            GetWindow(typeof(FolderCreator), false, "Folder Creator");
         }
-        if (_createHDRPFolders)
+
+        void OnGUI()
         {
-            Directory.CreateDirectory(Path.Combine(Application.dataPath, "_Project/Profiles"));
+            EditorGUILayout.Space();
+            if (GUILayout.Button("Create folders", GUILayout.Height(50f)))
+            {
+                CreateFolders();
+            }
+            EditorGUILayout.Space();
+            EditorGUILayout.LabelField("", GUI.skin.horizontalSlider);
+            EditorGUILayout.Space();
+            GUILayout.BeginHorizontal("box");
+            _create3DFolders = GUILayout.Toggle(_create3DFolders, "3D", GUILayout.Height(40f));
+            GUILayout.EndHorizontal();
+            GUILayout.BeginHorizontal("box");
+            _createHDRPFolders = GUILayout.Toggle(_createHDRPFolders, "HDRP", GUILayout.Height(40f));
+            GUILayout.EndHorizontal();
         }
-        AssetDatabase.Refresh();
+
+        private void CreateFolders()
+        {
+            if (_create3DFolders)
+            {
+                Directory.CreateDirectory(Path.Combine(Application.dataPath, "_Project/Models"));
+                Directory.CreateDirectory(Path.Combine(Application.dataPath, "_Project/Textures"));
+            }
+            if (_createHDRPFolders)
+            {
+                Directory.CreateDirectory(Path.Combine(Application.dataPath, "_Project/Profiles"));
+            }
+            AssetDatabase.Refresh();
+        }
     }
 }
