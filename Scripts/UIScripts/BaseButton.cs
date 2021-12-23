@@ -15,7 +15,8 @@ namespace Demonics.UI
         [SerializeField] public UnityEvent _onClickedAnimationEnd = default;
         [SerializeField] public UnityEvent _onSelected = default;
         [SerializeField] private RectTransform _scrollView = default;
-        [SerializeField] private float _scrollAmount = default;
+        [SerializeField] private float _scrollUpAmount = default;
+        [SerializeField] private float _scrollDownAmount = default;
         [SerializeField] private bool _ignoreFirstSelectSound = default;
         protected Audio _audio;
         protected Button _button;
@@ -83,7 +84,7 @@ namespace Demonics.UI
             AxisEventData axisEventData = eventData as AxisEventData;
             if (axisEventData.moveDir == MoveDirection.Down)
             {
-                _scrollView.anchoredPosition += new Vector2(0.0f, _scrollAmount);
+                _scrollView.anchoredPosition += new Vector2(0.0f, _scrollDownAmount);
             }
         }
 
@@ -92,7 +93,7 @@ namespace Demonics.UI
             AxisEventData axisEventData = eventData as AxisEventData;
             if (axisEventData.moveDir == MoveDirection.Up)
             {
-                _scrollView.anchoredPosition += new Vector2(0.0f, _scrollAmount);
+                _scrollView.anchoredPosition += new Vector2(0.0f, _scrollUpAmount);
             }
         }
 
