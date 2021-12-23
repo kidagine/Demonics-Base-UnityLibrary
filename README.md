@@ -1,2 +1,2 @@
 # Demonics-UnityLibrary
-Unity library.
+A generic unity library I made for my own projects.
