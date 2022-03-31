@@ -68,6 +68,7 @@ namespace Demonics.UI
 		{
 			if (!_wasClicked)
 			{
+				EventSystem.current.sendNavigationEvents = false;
 				if (!_allowMultiplePresses)
 				{
 					_wasClicked = true;
@@ -84,6 +85,7 @@ namespace Demonics.UI
 			{
 				_animator.SetBool("IsSelected", true);
 			}
+			EventSystem.current.sendNavigationEvents = true;
 			_onClickedAnimationEnd?.Invoke();
 		}
 
