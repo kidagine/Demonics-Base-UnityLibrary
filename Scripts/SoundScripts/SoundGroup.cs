@@ -28,5 +28,11 @@ namespace Demonics.Sounds
 			randomSound.source.Play();
 			return randomSound;
 		}
+
+		public Sound Sound(string name)
+		{
+			Sound sound = Array.Find(sounds, s => s.name == name);
+			return sound;
+		}
 	}
 }
