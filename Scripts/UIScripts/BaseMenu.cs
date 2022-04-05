@@ -7,7 +7,7 @@ namespace Demonics.UI
 {
 	public class BaseMenu : MonoBehaviour
 	{
-		[SerializeField] private Selectable _startingOption = default;
+		[SerializeField] protected Selectable _startingOption = default;
 
 
 		public void OpenMenuHideCurrent(BaseMenu menu)
