@@ -14,7 +14,7 @@ namespace Demonics.UI
 	{
 		[SerializeField] public UnityEvent _onClickedAnimationEnd = default;
 		[SerializeField] public UnityEvent _onSelected = default;
-		[SerializeField] private RectTransform _scrollView = default;
+		[SerializeField] public RectTransform _scrollView = default;
 		[SerializeField] private float _scrollUpAmount = default;
 		[SerializeField] private float _scrollDownAmount = default;
 		[SerializeField] private bool _ignoreFirstSelectSound = default;
