@@ -1,6 +1,6 @@
 {
   "name": "com.kiddo.demonics.base",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "displayName": "Demonics Base",
   "description": "Demonics Base is a package that contains the base files for demonics library.",
   "unity": "2020.1",
